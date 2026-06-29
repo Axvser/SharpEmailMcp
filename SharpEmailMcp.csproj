@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cocona" Version="2.2.0" />
     <PackageReference Include="MailKit" Version="4.17.0" />
     <PackageReference Include="ModelContextProtocol" Version="1.4.0" />
   </ItemGroup>
