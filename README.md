@@ -179,10 +179,8 @@ var tools = await scope.LoadAsync([
     {
         Name = "email",
         RunMode = McpServerRunMode.Dotnet,
-        NpmPackage = "sharp-email-mcp",
-        ServerModulePath = "SharpEmailMcp.dll",
-        // Pass SMTP credentials via CLI arguments — never hardcode
-        ServerArguments =
+        Package = "sharp-email-mcp/SharpEmailMcp.dll",
+        Arguments =
         [
             "--smtp-user", Environment.GetEnvironmentVariable("SMTP_USER")!,
             "--smtp-pass", Environment.GetEnvironmentVariable("SMTP_PASS")!,
@@ -229,9 +227,8 @@ public class EmailTests
             {
                 Name = "email",
                 RunMode = McpServerRunMode.Dotnet,
-                NpmPackage = "sharp-email-mcp",
-                ServerModulePath = "SharpEmailMcp.dll",
-                ServerArguments =
+                Package = "sharp-email-mcp/SharpEmailMcp.dll",
+                Arguments =
                 [
                     "--smtp-user", smtpUser,
                     "--smtp-pass", smtpPass,
